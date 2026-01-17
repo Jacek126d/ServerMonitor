@@ -18,11 +18,15 @@ public class MonitorController : ControllerBase
         _monitorService = monitorService;
     }
     [HttpGet]
-    public async Task<IActionResult> GetStatus()
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetTarget(int id)
     {
-        await _monitorService.CheckTargetsAsync();
-        var results = await _context.Targets.ToListAsync();
-        return Ok(results);
+        var target = await _context.Targets.FindAsync(id); 
+        if (target == null)
+        {
+            return NotFound();
+        }
+        return Ok(target);
     }
     [HttpPost]
     public async Task<IActionResult> AddTarget([FromBody] Models.MonitorTarget target)
@@ -30,6 +34,6 @@ public class MonitorController : ControllerBase
         target.LastChecked = DateTime.MinValue;
         _context.Targets.Add(target);
         await _context.SaveChangesAsync();
-        return CreatedAtAction(nameof(GetStatus), new { id = target.Id }, target);
+        return CreatedAtAction(nameof(GetTarget), new { id = target.Id }, target);
     }
 }

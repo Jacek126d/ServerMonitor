@@ -39,13 +39,11 @@ namespace ServerMonitor.Migrations
                 {
                     { 1, "Social", false, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "YouTube", 0, null, "https://www.youtube.com" },
                     { 2, "Social", false, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Facebook", 0, null, "https://www.facebook.com" },
-                    { 3, "Social", false, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "X (Twitter)", 0, null, "https://twitter.com" },
-                    { 4, "Cloud", false, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "AWS Console", 0, null, "https://aws.amazon.com" },
-                    { 5, "Cloud", false, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Microsoft Azure", 0, null, "https://azure.microsoft.com" },
+                    { 3, "Social", false, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "X", 0, null, "https://x.com" },
+                    { 4, "Cloud", false, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "AWS", 0, null, "https://aws.amazon.com" },
+                    { 5, "Cloud", false, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Azure", 0, null, "https://azure.microsoft.com" },
                     { 6, "Cloud", false, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Cloudflare", 0, null, "https://www.cloudflare.com" },
-                    { 7, "Security", false, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Have I Been Pwned", 0, null, "https://haveibeenpwned.com" },
-                    { 8, "Science", false, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "NASA", 0, null, "https://www.nasa.gov" },
-                    { 9, "Government", false, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Gov.pl", 0, null, "https://www.gov.pl" }
+                    { 7, "Government", false, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Gov.pl", 0, null, "https://www.gov.pl" }
                 });
         }
 

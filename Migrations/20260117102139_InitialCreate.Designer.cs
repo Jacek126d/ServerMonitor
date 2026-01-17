@@ -12,7 +12,7 @@ using ServerMonitor.Data;
 namespace ServerMonitor.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260115213331_InitialCreate")]
+    [Migration("20260117102139_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -88,9 +88,9 @@ namespace ServerMonitor.Migrations
                             Category = "Social",
                             IsOnline = false,
                             LastChecked = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "X (Twitter)",
+                            Name = "X",
                             ResponseTimeMs = 0,
-                            Url = "https://twitter.com"
+                            Url = "https://x.com"
                         },
                         new
                         {
@@ -98,7 +98,7 @@ namespace ServerMonitor.Migrations
                             Category = "Cloud",
                             IsOnline = false,
                             LastChecked = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "AWS Console",
+                            Name = "AWS",
                             ResponseTimeMs = 0,
                             Url = "https://aws.amazon.com"
                         },
@@ -108,7 +108,7 @@ namespace ServerMonitor.Migrations
                             Category = "Cloud",
                             IsOnline = false,
                             LastChecked = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Microsoft Azure",
+                            Name = "Azure",
                             ResponseTimeMs = 0,
                             Url = "https://azure.microsoft.com"
                         },
@@ -125,26 +125,6 @@ namespace ServerMonitor.Migrations
                         new
                         {
                             Id = 7,
-                            Category = "Security",
-                            IsOnline = false,
-                            LastChecked = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Have I Been Pwned",
-                            ResponseTimeMs = 0,
-                            Url = "https://haveibeenpwned.com"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Category = "Science",
-                            IsOnline = false,
-                            LastChecked = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "NASA",
-                            ResponseTimeMs = 0,
-                            Url = "https://www.nasa.gov"
-                        },
-                        new
-                        {
-                            Id = 9,
                             Category = "Government",
                             IsOnline = false,
                             LastChecked = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),

@@ -19,19 +19,16 @@ public class HomeController : Controller
 
     public async Task<IActionResult> Index()
     {
-        // odswiezanie
         await _monitorService.CheckTargetsAsync();
-        //zaciaganie z bazy
         var targets = await _context.Targets.ToListAsync();
 
-        // widok 
         return View(targets);
     }
 
     [HttpPost]
     public async Task<IActionResult> Add(MonitorTarget target)
     {
-        // Prosta walidacja i dodanie do bazy
+        
         target.LastChecked = DateTime.MinValue;
         _context.Targets.Add(target);
         await _context.SaveChangesAsync();
